@@ -119,13 +119,27 @@
         </div>
 
         <div class="glass-card mt-4 flex items-center justify-between banner-cta animate-on-scroll delay-1 flex-mobile-col gap-2">
-           <div>
-             <h3 class="title-md mb-1">Ready to supply us?</h3>
-             <p class="text-muted">Current buying price: <strong>Rp 1.500 / kg</strong> (Cleaned)</p>
+           <div style="flex: 1">
+             <h3 class="title-md mb-1">Earnings Calculator</h3>
+             <p class="text-muted mb-2">Estimate your income by entering raw shell weight.</p>
+             <div class="calculator-box flex items-center gap-1">
+               <div class="input-group">
+                 <input type="number" id="shell-weight" placeholder="Weight (kg)" class="calc-input">
+                 <span class="unit">kg</span>
+               </div>
+               <i class="ph-bold ph-arrow-right text-muted"></i>
+               <div class="result-group">
+                 <span class="label">Total Est.</span>
+                 <span id="earnings-total" class="earnings-val">Rp 0</span>
+               </div>
+             </div>
            </div>
-           <button class="btn btn-primary">
-             <i class="ph-bold ph-whatsapp-logo"></i> Contact Coordinator
-           </button>
+           <div class="cta-actions">
+             <p class="text-xs text-muted mb-1 text-center">Buying Price: <strong>Rp 1.500 / kg</strong></p>
+             <button class="btn btn-primary w-full">
+               <i class="ph-bold ph-whatsapp-logo"></i> Contact Coordinator
+             </button>
+           </div>
         </div>
       </div>
     </section>
@@ -160,7 +174,11 @@
             </ul>
             <div class="mt-2 flex gap-1 items-center">
               <span class="price-tag">Rp 25.000 / kg</span>
-              <button class="btn btn-outline" style="flex:1">Order Powder</button>
+              <button class="btn btn-outline open-quote" data-product="Bio-Calcium Powder" style="flex:1">Request Quote</button>
+            </div>
+            <div class="usage-guide mt-2">
+              <h4 class="text-xs font-bold uppercase tracking-wider mb-1 text-primary">Application Guide:</h4>
+              <p class="text-xs text-muted">Mix <strong>0.5%–1.0%</strong> of total feed weight. Ideal for layer hens & aquaculture.</p>
             </div>
           </div>
 
@@ -182,12 +200,80 @@
             </ul>
             <div class="mt-2 flex gap-1 items-center">
               <span class="price-tag">Rp 18.000 / kg</span>
-              <button class="btn btn-outline" style="flex:1">Order Granules</button>
+              <button class="btn btn-outline open-quote" data-product="Soil Conditioner Granules" style="flex:1">Request Quote</button>
+            </div>
+            <div class="usage-guide mt-2">
+              <h4 class="text-xs font-bold uppercase tracking-wider mb-1 text-secondary">Application Guide:</h4>
+              <p class="text-xs text-muted">Apply <strong>100g–150g</strong> per pohon (Kelapa Sawit) or 1 ton/ha for soil pH repair.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- IoT Dashboard Section -->
+    <section class="section section-iot pt-0">
+      <div class="container text-center">
+        <div class="iot-dashboard glass-card animate-on-scroll mx-auto" style="max-width: 900px;">
+          <div class="flex justify-between items-center mb-4 flex-mobile-col gap-2 text-left">
+            <div>
+              <div class="badge badge-cyan flex items-center gap-1 mb-1">
+                <span class="dot pulse-green"></span> Live Monitor
+              </div>
+              <h3 class="title-md">MAC v1.0 <span class="text-gradient">Core Metrics</span></h3>
+            </div>
+            <div class="iot-controls">
+              <span class="text-xs text-muted">Device ID: <strong>RADIA-JKT-01</strong></span>
+            </div>
+          </div>
+          
+          <div class="grid grid-cols-4 gap-2 iot-stats">
+            <div class="stat-card iot-card">
+              <span class="stat-label">Drum Temp</span>
+              <div class="stat-val text-accent"><span id="iot-temp">892</span>°C</div>
+              <div class="mini-chart"><div class="line ripple"></div></div>
+            </div>
+            <div class="stat-card iot-card">
+              <span class="stat-label">Power Load</span>
+              <div class="stat-val text-primary"><span id="iot-power">9.4</span>kW</div>
+              <div class="mini-chart"><div class="line ripple"></div></div>
+            </div>
+            <div class="stat-card iot-card">
+              <span class="stat-label">Output Flow</span>
+              <div class="stat-val text-secondary"><span id="iot-flow">45</span>kg/h</div>
+              <div class="mini-chart"><div class="line ripple"></div></div>
+            </div>
+            <div class="stat-card iot-card">
+              <span class="stat-label">Efficiency</span>
+              <div class="stat-val">98.2%</div>
+              <div class="mini-chart"><div class="line ripple"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal: Request Quote -->
+    <div id="quote-modal" class="modal">
+      <div class="modal-content glass-card">
+        <div class="flex justify-between items-center mb-2">
+          <h3 class="title-md mb-0">Request Quote</h3>
+          <button id="close-modal" class="close-btn">&times;</button>
+        </div>
+        <p class="text-muted mb-2 text-sm">Product: <strong id="modal-product-name" class="text-primary"></strong></p>
+        <form id="quote-form" class="flex flex-col gap-2">
+          <div class="form-group">
+            <label class="text-xs text-muted">Quantity (kg)</label>
+            <input type="number" required placeholder="Ex: 500" class="calc-input w-full">
+          </div>
+          <div class="form-group">
+            <label class="text-xs text-muted">WhatsApp / Phone</label>
+            <input type="tel" required placeholder="0812..." class="calc-input w-full">
+          </div>
+          <button type="submit" class="btn btn-primary w-full mt-1">Send Inquiry</button>
+        </form>
+      </div>
+    </div>
 
     <!-- Footer -->
     <footer class="footer section">
