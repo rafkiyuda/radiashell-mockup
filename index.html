@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Phosphor Icons for modern iconography -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <title>RadiaShell - Smart Green Biorefinery Platform</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header class="navbar">
+      <div class="container flex justify-between items-center">
+        <a href="#" class="logo flex items-center gap-1">
+          <i class="ph-fill ph-hexagon text-gradient logo-icon"></i>
+          <span>RadiaShell</span>
+        </a>
+        <nav class="nav-links hide-mobile flex gap-4">
+          <a href="#hero">Platform</a>
+          <a href="#sell">Sell Raw Shells</a>
+          <a href="#products">Our Products</a>
+          <a href="#iot">IoT System</a>
+        </nav>
+        <div class="nav-actions">
+          <a href="#contact" class="btn btn-outline">Partner With Us</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="section hero-section flex items-center">
+      <div class="container grid grid-cols-2 items-center gap-6">
+        <div class="hero-content animate-on-scroll is-visible">
+          <div class="badge badge-cyan flex items-center gap-1 mb-1">
+             <i class="ph-fill ph-leaf"></i> MAC v1.0
+          </div>
+          <h1 class="title-xl">
+            Smart Green <br />
+            <span class="text-gradient">Biorefinery</span><br />
+            Platform
+          </h1>
+          <p class="subtitle mt-1 mb-2">
+            Transforming marine waste (mussels & oysters) into high-value bio-calcium via Microwave-Assisted Calcination. Engineered for coastal communities.
+          </p>
+          <div class="flex gap-2">
+            <a href="#sell" class="btn btn-primary">
+              <i class="ph-bold ph-hand-coins"></i> Sell to Us
+            </a>
+            <a href="#products" class="btn btn-outline glass-btn">
+              <i class="ph-bold ph-shopping-cart"></i> Buy Products
+            </a>
+          </div>
+          
+          <!-- Quick Stats -->
+          <div class="stats-grid grid grid-cols-3 gap-2 mt-4">
+            <div class="stat-card">
+              <i class="ph ph-lightning text-primary"></i>
+              <div class="stat-val">50%</div>
+              <div class="stat-label">Energy Saved</div>
+            </div>
+            <div class="stat-card">
+              <i class="ph ph-thermometer text-accent"></i>
+              <div class="stat-val">900°C</div>
+              <div class="stat-label">Max Calcination</div>
+            </div>
+            <div class="stat-card">
+              <i class="ph ph-recycle text-secondary"></i>
+              <div class="stat-val">Zero</div>
+              <div class="stat-label">Waste Output</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="hero-visual floating hide-mobile animate-on-scroll delay-2 is-visible">
+          <div class="glass-card hero-mockup flex-col items-center justify-center relative">
+              <!-- Animated Rings -->
+              <div class="ring ring-1"></div>
+              <div class="ring ring-2"></div>
+              <!-- Content -->
+              <i class="ph-duotone ph-factory text-primary hero-icon mb-1"></i>
+              <h3 class="font-heading text-lg">RadiaShell Core</h3>
+              <div class="status-indicator mt-1">
+                <span class="dot pulse-green"></span>
+                <span class="text-xs text-muted">System Active & Optimal</span>
+              </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Script Injection -->
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
+
+    <!-- Sell to Us Section -->
+    <section id="sell" class="section">
+      <div class="container">
+        <div class="text-center mb-4 flex flex-col items-center animate-on-scroll">
+          <div class="badge badge-green mb-1">For Coastal Farmers</div>
+          <h2 class="title-lg">Turn <span class="text-gradient">Waste</span> Into Revenue</h2>
+          <p class="subtitle mt-1">
+            We buy raw mussel and oyster shells directly from you. 
+            Help clear coastal waste and earn extra income.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-3 gap-3">
+          <!-- Step 1 -->
+          <div class="glass-card animate-on-scroll delay-1 text-center">
+            <div class="step-icon mb-2">
+              <i class="ph-duotone ph-waves text-primary"></i>
+            </div>
+            <h3 class="title-md mb-1">1. Collect</h3>
+            <p class="text-muted">Gather discarded shells from your daily harvest or processing.</p>
+          </div>
+          
+          <!-- Step 2 -->
+          <div class="glass-card animate-on-scroll delay-2 text-center">
+            <div class="step-icon mb-2">
+              <i class="ph-duotone ph-scales text-secondary"></i>
+            </div>
+            <h3 class="title-md mb-1">2. Weigh & QC</h3>
+            <p class="text-muted">Bring them to our RadiaShell MAC unit. We weigh via smart load cell.</p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="glass-card animate-on-scroll delay-3 text-center">
+            <div class="step-icon mb-2">
+              <i class="ph-duotone ph-wallet text-accent"></i>
+            </div>
+            <h3 class="title-md mb-1">3. Get Paid</h3>
+            <p class="text-muted">Receive instant payment based on quality and weight of the raw input.</p>
+          </div>
+        </div>
+
+        <!-- Sell CTA Banner -->
+        <div class="glass-card mt-4 flex items-center justify-between banner-cta animate-on-scroll delay-1 flex-mobile-col gap-2">
+           <div>
+             <h3 class="title-md mb-1">Ready to supply us?</h3>
+             <p class="text-muted">Current buying price: <strong>Rp 1.500 / kg</strong> (Cleaned)</p>
+           </div>
+           <button class="btn btn-primary">
+             <i class="ph-bold ph-whatsapp-logo"></i> Contact Coordinator
+           </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="section">
+      <div class="container">
+        <div class="text-center mb-4 flex flex-col items-center animate-on-scroll">
+          <div class="badge badge-cyan mb-1">Dual Output Stream</div>
+          <h2 class="title-lg">High-Grade <span class="text-gradient">Products</span></h2>
+          <p class="subtitle mt-1">
+            Processed via RadiaShell's Stage 4 Product Selector Junction for agricultural and animal-feed sectors.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4 product-cards">
+          <!-- Bio Calcium -->
+          <div class="glass-card product-card flex-col gap-2 animate-on-scroll delay-1">
+            <div class="flex justify-between items-center mb-1">
+              <div class="product-icon icon-cyan">
+                <i class="ph-fill ph-pill"></i>
+              </div>
+              <span class="badge badge-cyan">Feed Grade</span>
+            </div>
+            <div>
+              <h3 class="title-md mb-1">Bio-Calcium Powder</h3>
+              <p class="text-muted">Blended with 2000–5000 IU/kg Vitamin D3 to maximize calcium absorption for livestock.</p>
+            </div>
+            <ul class="spec-list">
+              <li><i class="ph-bold ph-check text-primary"></i> 1kg Pouch Output</li>
+              <li><i class="ph-bold ph-check text-primary"></i> 60–200 mesh micro-powder</li>
+              <li><i class="ph-bold ph-check text-primary"></i> Automated form-fill-seal packaging</li>
+            </ul>
+            <div class="mt-2 flex gap-1 items-center">
+              <span class="price-tag">Rp 25.000 / kg</span>
+              <button class="btn btn-outline" style="flex:1">Order Powder</button>
+            </div>
+          </div>
+
+          <!-- Soil Conditioner -->
+          <div class="glass-card product-card flex-col gap-2 animate-on-scroll delay-2">
+            <div class="flex justify-between items-center mb-1">
+              <div class="product-icon icon-green">
+                <i class="ph-fill ph-plant"></i>
+              </div>
+              <span class="badge badge-green">Soil Mode</span>
+            </div>
+            <div>
+              <h3 class="title-md mb-1">Soil Conditioner Granules</h3>
+              <p class="text-muted">Hydrated and granulated for repairing acidic soil. Dust-free slow release.</p>
+            </div>
+            <ul class="spec-list">
+              <li><i class="ph-bold ph-check text-secondary"></i> 1kg Sack Packing</li>
+              <li><i class="ph-bold ph-check text-secondary"></i> 2-6mm Granule Size</li>
+              <li><i class="ph-bold ph-check text-secondary"></i> Pan Granulator System</li>
+            </ul>
+            <div class="mt-2 flex gap-1 items-center">
+              <span class="price-tag">Rp 18.000 / kg</span>
+              <button class="btn btn-outline" style="flex:1">Order Granules</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer section">
+      <div class="container text-center text-muted">
+        <p>© 2026 RadiaShell. Smart Green Biorefinery Platform.</p>
+      </div>
+    </footer>
+
+    <!-- Script Injection -->
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
