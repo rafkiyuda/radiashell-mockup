@@ -1,4 +1,5 @@
 // Main JavaScript logic
+import './style.css';
 
 document.addEventListener('DOMContentLoaded', () => {
     // Scroll Animation Observer
