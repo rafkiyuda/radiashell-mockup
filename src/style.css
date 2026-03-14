@@ -139,18 +139,36 @@ img { max-width: 100%; height: auto; display: block; }
 .stat-val { font-family: var(--font-heading); font-size: 1.5rem; font-weight: 700; }
 .stat-label { font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; }
 
-.hero-mockup {
-  width: 100%;
-  aspect-ratio: 1;
-  max-width: 400px;
-  margin: 0 auto;
-  border-radius: 50%;
-  background: radial-gradient(circle at center, rgba(0, 229, 255, 0.1), transparent 70%);
-  border: 1px solid rgba(0, 229, 255, 0.2);
+/* Machine Visual */
+.machine-container {
   position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
 }
-.hero-icon { font-size: 5rem; filter: drop-shadow(0 0 10px var(--primary)); }
-.status-indicator { display: flex; align-items: center; gap: 0.5rem; background: rgba(0,0,0,0.5); padding: 0.5rem 1rem; border-radius: var(--radius-pill); border: 1px solid rgba(57, 255, 20, 0.3); }
+
+.machine-img {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 0 0 30px var(--primary-glow);
+  border: var(--glass-border);
+  transition: var(--transition);
+}
+
+.machine-img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6), 0 0 40px var(--primary-glow);
+}
+
+.abs-status {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.status-indicator { display: flex; align-items: center; gap: 0.5rem; background: rgba(0,0,0,0.6); padding: 0.5rem 1rem; border-radius: var(--radius-pill); border: 1px solid rgba(57, 255, 20, 0.3); }
 .dot { width: 8px; height: 8px; border-radius: 50%; }
 .pulse-green { background-color: var(--secondary); animation: pulse 2s infinite; }
 
@@ -160,24 +178,38 @@ img { max-width: 100%; height: auto; display: block; }
   100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(57, 255, 20, 0); }
 }
 
-.ring { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); border-radius: 50%; border: 1px solid rgba(0, 229, 255, 0.2); }
-.ring-1 { width: 120%; height: 120%; animation: spin 20s linear infinite; border-left-color: var(--primary); }
-.ring-2 { width: 140%; height: 140%; animation: spin-reverse 30s linear infinite; border-right-color: var(--secondary); }
-
-@keyframes spin { from { transform: translate(-50%, -50%) rotate(0deg); } to { transform: translate(-50%, -50%) rotate(360deg); } }
-@keyframes spin-reverse { from { transform: translate(-50%, -50%) rotate(360deg); } to { transform: translate(-50%, -50%) rotate(0deg); } }
-
 /* Sell Section */
 .step-icon { width: 80px; height: 80px; margin: 0 auto; background: rgba(255, 255, 255, 0.03); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; }
 .banner-cta { background: linear-gradient(90deg, rgba(16, 23, 38, 0.8), rgba(0, 229, 255, 0.1)); border-left: 4px solid var(--primary); }
 
 /* Products Section */
-.product-card { border-top: 2px solid transparent; }
+.product-card { border-top: 2px solid transparent; display: flex; flex-direction: column; }
 .product-card:nth-child(1) { border-top-color: var(--primary); }
 .product-card:nth-child(2) { border-top-color: var(--secondary); }
-.product-icon { width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; }
-.icon-cyan { background: rgba(0, 229, 255, 0.1); color: var(--primary); }
-.icon-green { background: rgba(57, 255, 20, 0.1); color: var(--secondary); }
+
+.product-image-wrap {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  margin-bottom: 1rem;
+  background: rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: var(--transition);
+  padding: 1rem;
+}
+
+.product-card:hover .product-img {
+  transform: scale(1.1) translateY(-5px);
+}
 .spec-list li { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; color: var(--text-muted); font-size: 0.9rem; }
 .price-tag { font-family: var(--font-heading); font-weight: 700; font-size: 1.2rem; }
 
